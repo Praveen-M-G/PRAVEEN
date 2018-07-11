@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #customers td, #customers th {
+        border: 1px solid black;
+        padding: 6px;
+        text-align: center;
+    }
+
+    #customers th{
+        background-color: lightgray;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+{% set name=username %}
+<h2>{{ name[0] }}'s Cart: </h2>
+<table id="customers" style="width:50%;border:2px solid black;border-collapse: collapse;">
+    <tr><th>Username</th><th>Product</th></tr>
+    {%  for name in cartdetails %}
+        <tr><td>{{ name[0] }}</td><td> {{ name[1] }}</td></tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

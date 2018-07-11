@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<style>
+      #header
+    {
+        background-color: darkslategrey;
+        width:100%;
+        top: 0;
+        left: 0;
+        height: 85px;
+        position: fixed;
+    }
+    #iphone input
+    {
+        width: 160px;
+        height: 30px;
+        background-color: goldenrod;
+        left: 70px;
+        position: relative;
+    }
+    #cart
+    {
+        position: fixed;
+        right: 190px;
+        top:15px;
+        padding: 1px;
+        width:50px;
+        background-color: none;
+    }
+
+      #login
+    {
+        position:fixed;
+        right:40px;
+        color:white;
+        font-size: 18px;
+        top: 33px;
+        text-decoration: none;
+    }
+    #orders
+    {
+        position:fixed;
+        right:320px;
+        color:white;
+        font-size: 18px;
+        top: 33px;
+        text-decoration: none;
+    }
+    #orders:hover
+    {
+        background-color: goldenrod;
+        border: slategray;
+    }
+
+
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iphone7</title>
+</head>
+<body>
+<form method="POST">
+    <div id="header"></div>
+    <a title="Takes you to Mobile shop" href="https://www.google.co.in/maps/place/SRI+VINAYAKA+ENTERPRISES/@12.9054924,77.5452463,14z/data=!4m8!1m2!2m1!1ssri+vinayaka+enterprises+raghivanahalli+bangalore+map!3m4!1s0x3bae3ff16935d0b7:0xf55fe6a95d279169!8m2!3d12.881866!4d77.545722"><p style="color:white;padding:4px;font-size:20px;font-family: 'Trebuchet MS', sans-serif;left:20px;position: fixed">Sri Vinayaka Enterprises</p></a>
+<a href="/orders" id="orders">Your Orders</a>
+    <a href="/cart" ><img src="../static/cartwheel.png" id="cart"></a>
+<a href="/dashboard" id="login">Dashboard</a>
+    <br><br><br><br><br><br>
+<img style="float: left" src="../static/iphone7.jpg"  style="left: 50px;position: absolute;">
+<p><b style="font-size:18px;">
+    Apple iPhone 6 (Gold, 32GB)</b></p>
+<p>M.R.P :  <b style="color: indianred;text-decoration: line-through">30,780.00</b></p>
+<p>Price:	<b style="color: indianred">24,744.00</b></p>
+<p>You Save: <b style="color: indianred">6,036.00 (20%)</b></p>
+Inclusive of all taxes
+
+Pay on Delivery (Cash/Card)</b> eligible
+<p style="color: green;">
+    <b>In stock.</b></p>
+Guaranteed delivery to pincode 560078 - Bengaluru by Sunday, June 17 with Two-Day Delivery — Order in the next 3 hours and 50 minutes Details
+Sold by Cloudtail India (4.1 out of 5 | 90,790 ratings) and Fulfilled by <b>Sri Vinayaka Enterprises</b>.
+<p>Gift-wrap available.</p>
+<p><b>Specification:</b></p>
+    <ul>
+        <li>11.93 centimeters (4.7-inch) capacitive touchscreen with 1334 x 750 pixels resolution</li>
+        <li>iOS v8 operating system with 1.4GHz Apple A8 quad core processor, 1GB RAM, 32GB internal memory and single SIM</li>
+        <li>1810mAH lithium-ion battery</li>
+        <li>1 year manufacturer warranty for device and in-box accessories including batteries from the date of purchase</li>
+</ul>
+<br><br>
+<div id="iphone">
+<input type="submit" name="Order" value="Order" >
+<p><input type="submit" name="cart" value="Add to Cart" ></p>
+</div>
+</div>
+    {% for msg in get_flashed_messages() %}
+    <p style="color: brown; left: 45px;position: fixed; font-size: 20px; font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace">{{ msg }}</p>
+    {%  endfor %}
+
+</form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<style>
+    #a,#c
+    {
+        border-color: #00B4CC;
+    }
+
+    #password:hover
+    {
+        color: Red;
+    }
+     #image
+    {
+        background-image: url("../static/mobile2.jpg");
+        background-size: 100%;
+        background-blend-mode: lighten;
+        background-repeat: initial;
+         }
+    #header
+    {
+        background-color: darkslategrey;
+        width:100%;
+        top: 0;
+        left: 0;
+        height: 85px;
+        position: fixed;
+    }
+
+    #sub
+    {
+          background-color: darkorange;
+          width: 200px;
+          height: 25px;
+          border-radius: 10px;
+
+    }
+
+    #home
+    {
+        position:fixed;
+        right:60px;
+        color:white;
+        font-size: 18px;
+        top: 25px;
+        text-decoration: none;
+    }
+
+</style>
+
+<head>
+
+    <title>Signup</title>
+</head>
+<body id="image">
+<form method="POST">
+<div id="header">
+    <a title="Takes you to Mobile shop" href="https://www.google.co.in/maps/place/SRI+VINAYAKA+ENTERPRISES/@12.9054924,77.5452463,14z/data=!4m8!1m2!2m1!1ssri+vinayaka+enterprises+raghivanahalli+bangalore+map!3m4!1s0x3bae3ff16935d0b7:0xf55fe6a95d279169!8m2!3d12.881866!4d77.545722"> <p style="color:white;padding:8px;font-size:20px;font-family: 'Trebuchet MS', sans-serif;left:20px;position: fixed">Sri Vinayaka Enterprises</p></a>
+    <a href="/" id="home">Home</a>
+<br><br><br><br>
+ <center>
+  <h2> Login Here:</h2>
+    <table style="border:2px solid black;padding: 25px">
+        <tr><td style="color: black;font-size: 17px; "><b>Email:</b></td><td ><input id="a"type="text" name="id"></td></tr>
+        <tr><td style="font-size: 17px;"><b>Password:</b></td><td ><input id="c" type="password" name="password"></td></tr>
+    </table>
+        <br>
+     <input type="submit" value="Continue" id="sub">
+     <br><br>
+ <a id="password" href="/pwreset" style="color: black">Forgot Password ?</a>
+        {%  for msg in get_flashed_messages() %}
+            <p style="color: black; font-size: 23px; font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace">{{ msg }}</p>
+        {%  endfor %}
+        <br>
+
+         </center>
+</div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<style>
+    #a input ,#b input ,#c input ,#d input
+    {
+        border-color: #00B4CC;
+    }
+
+      #header
+    {
+        background-color: darkslategrey;
+        width:100%;
+        top: 0;
+        left: 0;
+        height: 85px;
+        position: fixed;
+    }
+
+      #sub,#clear{
+          background-color: peru;
+          width: 120px;
+          height: 25px;
+          border-radius: 5px;
+      }
+      #des{
+          top: 120px;
+          position: fixed;
+          left: 50px;
+      }
+     #login
+    {
+        position:fixed;
+        right:40px;
+        color:white;
+        font-size: 18px;
+        top: 25px;
+        text-decoration: none;
+    }
+     #pipe
+     {
+          position:fixed;
+        right:100px;
+        color:white;
+        font-size: 24px;
+        top: 0;
+     }
+        #image
+    {
+        background-image: url("../static/mobile2.jpg");
+        background-size: 100%;
+            background-position:0px 60px;
+         }
+    #home
+    {
+        position:fixed;
+        right:120px;
+        color:white;
+        font-size: 18px;
+        top: 25px;
+        text-decoration: none;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body id="image">
+<form method="POST">
+<div id="header">
+    <a title="Takes you to Mobile shop" href="https://www.google.co.in/maps/place/SRI+VINAYAKA+ENTERPRISES/@12.9054924,77.5452463,14z/data=!4m8!1m2!2m1!1ssri+vinayaka+enterprises+raghivanahalli+bangalore+map!3m4!1s0x3bae3ff16935d0b7:0xf55fe6a95d279169!8m2!3d12.881866!4d77.545722">  <p style="color:white;padding:8px;font-size:20px;font-family: 'Trebuchet MS', sans-serif;left:20px;position: fixed">Sri Vinayaka Enterprises</p></a>
+    <a href="/" id="home">Home</a>
+<p id="pipe">|</p>
+<a href="/login" id="login">Login</a>
+<br><br><br><br><br><br>
+<div id="des">
+    <fieldset style="border: 2px solid black;">
+        <legend style="border: black;font-size: 21px;"><b>Registration Details:</b></legend>
+        <center>
+    <table id="design">
+        <tr><td><b>Username:</b></td><td id="a"><input type="text" name="username"></td></tr>
+        <tr><td><b>Email:</b></td><td id="b"><input type="text" name="id"></td></tr>
+        <tr><td><b>Password:</b></td><td id="c"><input type="password" name="password"></td></tr>
+        <tr><td><b>Mobile Number:</b></td><td id="d"><input type="text" name="num"></td></tr>
+    </table>
+        <br>
+        <input type="submit" value="Sign Up" id="sub"> <input type="reset" value="Clear" id="clear"></center>
+</fieldset>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+        {%  for msg in get_flashed_messages() %}
+            <p style="color: black; position:fixed;left:30px;font-size: 24px; font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace">{{ msg }}</p>
+        {%  endfor %}
+    </div>
+</form>
+</body>
+</html>

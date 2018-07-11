@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<style>
+
+    #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+        text-align: center;
+}
+    #customers th{
+        background-color: darkgray;
+    }
+
+    #customers td, #customers th {
+    border: 1px solid black;
+    padding: 6px;
+}
+
+#customers tr:hover {background-color: #ddd;}
+
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+<form method="post">
+{% set name=username %}
+    <h2> {{ name[0] }}'s Orders </h2>
+<table border="2" id="customers" >
+    <tr><th>Username</th><th>Product</th><th>Price</th></tr>
+    {% for user in userdetails %}
+    <tr><td>{{ user[0] }}</td><td>{{ user[1] }}</td><td>-</td></tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+</html>

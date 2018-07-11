@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+    <style xmlns="http://www.w3.org/1999/html">
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 10%;
+    padding: 5px;
+    top: 10px;
+}
+
+.column img:hover
+{
+    border: 2px solid gray;
+}
+
+#header
+    {
+        background-color: darkslategrey;
+        width:100%;
+        top: 0;
+        left: 0;
+        height: 85px;
+        position: fixed;
+    }
+#orders
+{
+    position:fixed;
+    right:260px;
+    text-decoration: none;
+    top:28px;
+    font-size:19px;
+    color:white;
+
+}
+
+#orders:hover
+{
+    background-color: chocolate;
+}
+    #cart
+    {
+        position: fixed;
+        right: 160px;
+        top:15px;
+        padding: 1px;
+        width:50px;
+        background-color: none;
+    }
+
+    #name
+    {
+        position:fixed;
+        color: white;
+        font-size:21px;
+        right:1160px;
+        padding:09px;
+        top: 0px;
+    }
+    #logout
+    {
+        position:fixed;
+        right:40px;
+        color:white;
+        font-size: 18px;
+        top: 27px;
+        text-decoration: none;
+    }
+    #inp input
+    {
+        positon:fixed;
+        width:600px;
+        padding:10px;
+        font-size: 16px;
+    }
+
+    .searchButton
+    {
+      position: fixed;
+      top:16px;
+      right: 455px;
+      width: 60px;
+      height: 42px;
+      border: 1px solid #00B4CC;
+      background: gold;
+    }
+
+
+</style>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<div id="header">
+<a title="Takes you to Mobile shop" href="https://www.google.co.in/maps/place/SRI+VINAYAKA+ENTERPRISES/@12.9054924,77.5452463,14z/data=!4m8!1m2!2m1!1ssri+vinayaka+enterprises+raghivanahalli+bangalore+map!3m4!1s0x3bae3ff16935d0b7:0xf55fe6a95d279169!8m2!3d12.881866!4d77.545722"><p style="color:white;padding:8px;font-size:20px;font-family: 'Trebuchet MS', sans-serif;left:20px;position: fixed">Sri Vinayaka Enterprises</p>
+</a>    <div class="search">
+    <center><p id="inp"> <input type="text" placeholder="Search.." name="search"></p></center>
+        <button type="submit" class="searchButton"></button>
+    </div>
+    {%  set name=username %}
+    <p id="name"> Hello {{ name[0] }}</p>
+    <a href="/cart"><img src="../static/cartwheel.png" id="cart" title="{{ name }}'s Cart"></a>
+<a href="/" id="logout">Logout</a>
+    <a id="orders" href="/orders" title="{{ name }}'s orders">Your orders</a>
+</div>
+<br><br><br><br><br><br>
+<h2 style="font-size: 22px;font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;color: slategray;"> Today's Deals</h2>
+  <div class="column">
+  <a href="/iphone7"><img src="../static/iphone7.jpg" alt="Iphone7" style="left: 450px;position: absolute;">
+  </a>
+  </div>
+  <div class="column">
+    <a href="/samsung"><img src="../static/s6.jpg" alt="Samsung" style="left: 10px;position: absolute;height: 400px;"></a>
+  </div>
+   <div class="column">
+    <img src="../static/oppo.jpg" alt="Forest" style="left: 760px;position: fixed;height: 440px; padding: 0px;">
+  </div>
+ <div class="column">
+    <img src="../static/redmi.jpg" alt="Forest" style="left: 1220px;position: fixed;height: 440px; padding: 0px;">
+  </div>
+</body>
